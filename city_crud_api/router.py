@@ -14,16 +14,11 @@ from city_crud_api.crud import (
     crud_delete_city
 
 )
+from depedencies import get_db
 
 city_router = APIRouter()
 
 
-def get_db():
-    db = SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()
 
 
 @city_router.post("/cities/", response_model=City)

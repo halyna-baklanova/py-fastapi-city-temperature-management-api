@@ -6,19 +6,13 @@ from sqlalchemy.orm import Session
 
 from city_crud_api.crud import crud_update_city
 from city_crud_api.schemas import CityUpdate
+from depedencies import get_db
 
 from temperature_api.crud import get_temperatures_crud, get_temperature_by_city_id_crud
 from temperature_api.schemas import TemperatureBase
 
 
 temperature_router = APIRouter()
-
-def get_db():
-    db = SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close
 
 @temperature_router.get("/temperatures/", response_model=list[TemperatureBase])
 def list_temperatures(
