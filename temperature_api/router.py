@@ -8,9 +8,9 @@ from sqlalchemy.orm import Session
 from city_crud_api.crud import crud_update_city
 from city_crud_api.schemas import CityUpdate
 from database import SessionLocal, get_async_db
-from depedencies import get_db
+from dependencies import get_db
 from models.city_models import City
-from models.tempearature_models import Temperature
+from models.temperature_models import Temperature
 from temperature_api.crud import (
     crud_update_temperature,
     fetch_temperature,

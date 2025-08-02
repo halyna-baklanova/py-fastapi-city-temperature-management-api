@@ -11,7 +11,7 @@ from city_crud_api.crud import (
     crud_update_city,
     crud_delete_city
 )
-from depedencies import get_db
+from dependencies import get_db
 
 city_router = APIRouter()
 

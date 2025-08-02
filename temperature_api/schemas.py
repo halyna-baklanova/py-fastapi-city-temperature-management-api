@@ -9,14 +9,8 @@ class TemperatureBase(BaseModel):
     temperature: float
 
     class Config:
-        # from_attributes = True
         orm_mode = True
 
 
 class TemperatureUpdate(TemperatureBase):
-    city_id: int
-    date_time: datetime.datetime
-    temperature: float
-
-    class Config:
-        orm_mode = True
+    pass

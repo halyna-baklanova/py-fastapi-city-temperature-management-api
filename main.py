@@ -1,6 +1,7 @@
 from fastapi import FastAPI, Depends
 
-from city_crud_api.router import city_router, get_db
+from city_crud_api.router import city_router
+from dependencies import get_db
 from temperature_api.router import temperature_router
 
 app = FastAPI()
