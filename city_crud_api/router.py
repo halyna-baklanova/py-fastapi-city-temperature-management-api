@@ -1,18 +1,15 @@
-from city_crud_api.schemas import CityCreate
-from database import SessionLocal
 from fastapi import APIRouter, Depends, HTTPException
 
 from sqlalchemy.orm import Session
 
+from city_crud_api.schemas import CityCreate
 from city_crud_api.schemas import City, CityUpdate
-
 from city_crud_api.crud import (
     create_city as crud_create_city,
     get_cities,
     get_city_by_id as crud_get_city_by_id,
     crud_update_city,
     crud_delete_city
-
 )
 from depedencies import get_db
 

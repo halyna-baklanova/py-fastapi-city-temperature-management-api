@@ -1,6 +1,6 @@
-from models.base import Base
-
 from sqlalchemy import Column, Integer, ForeignKey, DateTime, Float
+
+from models.base import Base
 
 
 class Temperature(Base):
