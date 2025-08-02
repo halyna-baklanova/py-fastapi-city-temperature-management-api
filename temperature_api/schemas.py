@@ -4,7 +4,7 @@ import datetime
 
 class TemperatureBase(BaseModel):
     city_id: int
-    datetime: datetime.datetime
+    date_time: datetime.datetime
     temperature: float
 
     class Config:
@@ -12,9 +12,10 @@ class TemperatureBase(BaseModel):
         orm_mode = True
 
 
-class TemperatureCreate(TemperatureBase):
-    pass
+class TemperatureUpdate(TemperatureBase):
+    city_id: int
+    date_time: datetime.datetime
+    temperature: float
 
-
-class Temperature(TemperatureBase):
-    id: int
+    class Config:
+        orm_mode = True
