@@ -49,13 +49,13 @@ async def crud_update_temperature(db: AsyncSession, city_id: int, temperature: f
     if temp_record:
         # Оновлюємо існуючий запис
         temp_record.temperature = temperature
-        temp_record.date_time = datetime.datetime.utcnow()
+        temp_record.date_time = datetime.utcnow()
     else:
         # Створюємо новий запис
         temp_record = Temperature(
             city_id=city_id,
             temperature=temperature,
-            date_time=datetime.datetime.utcnow()
+            date_time=datetime.utcnow()
         )
         db.add(temp_record)
 
